@@ -25,12 +25,17 @@ const [filter, setFilter] = useState("all");
 
   return (
     <div>
-      <h1>{/* TODO: Add 'Product Dashboard' title here */}</h1>
+      <h1>Product Dashboard</h1>
       
       {/* TODO: Add buttons to allow filtering by availability */}
+      <div>
+        <button onClick={() => setFilter("all")}>All Products</button>
+        <button onClick={() => setFilter("inStock")}>In Stock</button>
+        <button onClick={() => setFilter("outOfStock")}>Out of Stock</button>
+      </div>
 
       {/* TODO: Render the ProductList component and pass filtered products */}
-      
+      <ProductList products={filteredProducts} />
     </div>
   );
 };
